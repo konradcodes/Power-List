@@ -4,49 +4,34 @@
 
 .header {
   position: relative;
-  height: 100vh;
-  width: 100%;
-  margin: 0;
-  background-image: url("/img/header.jpg");
-  background-position: bottom;
-  background-size: cover;
+  background-image: linear-gradient(to right, $color-orange, $color-yellow);
+  opacity: 0.8;
+  height: 70vh;
+  border-bottom-right-radius: 90% 50%;
+  border-bottom-left-radius: 40% 90%;
 
-  &__logo-box {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
+  &__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
   }
 
-  &__logo {
-    height: 3.5rem;
+  &__iphone-box {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    margin-right: 10rem;
   }
-  &__navbar {
-    text-decoration: none;
+  &__image {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background-color: transparent;
-    overflow: hidden;
-    text-align: center;
-    backface-visibility: hidden;
-    animation: fromTop 1.7s ease-in-out;
-
-    & ul {
-      list-style-type: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
-    & li {
-      font-size: 0.7rem;
-      margin: 0.3rem;
-      font-weight: 400;
-    }
-    & a {
-      text-decoration: none;
-      color: $color-white;
-      transition: all 0.3s;
-    }
+    height: 50rem;
+    bottom: -5rem;
+    animation: slideFromTop 1s ease-out;
+  }
+  &__text-box {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
   }
 }

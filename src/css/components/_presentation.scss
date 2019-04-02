@@ -1,0 +1,20 @@
+.presentation {
+  margin-top: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__app {
+    background: #263d42;
+    width: 50%;
+    height: 20rem;
+    box-shadow: 1rem 2rem 3.5rem rgba($color-black, 0.45);
+    transition: all 0.3s;
+    margin-right: 5rem;
+
+    &:hover {
+      transform: translateY(-0.7rem);
+      box-shadow: 0.5rem 1rem 3rem rgba($color-black, 0.35);
+    }
+  }
+}

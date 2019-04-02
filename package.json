@@ -1,7 +1,7 @@
 {
-  "name": "forkify",
+  "name": "power-list",
   "version": "1.0.0",
-  "description": "Recipe searching application",
+  "description": "Power List Project",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",

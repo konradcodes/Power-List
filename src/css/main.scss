@@ -6,13 +6,13 @@
 // 2. Vendors
 
 // 3. Base stuff
-@import "base/base", "base/fonts", "base/typography", "base/reset", "base/animations";
+@import "base/base", "base/fonts", "base/typography", "base/reset", "base/animations", "base/utilities";
 
 // 4. Layout-related sections
-@import "layout/header", "layout/footer";
+@import "layout/header", "layout/iphone", "layout/footer";
 
 // 5. Components
-@import "components/button";
+@import "components/button", "components/presentation";
 
 // 6. Page-specific styles
 @import "pages/home";

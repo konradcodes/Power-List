@@ -1,3 +1,36 @@
 // -----------------------------------------------------------------------------
 //* This file contains all animations, @keyframes.
 // -----------------------------------------------------------------------------
+
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-30rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
