@@ -26,5 +26,10 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.0",
     "axios": "^0.18.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   }
 }
