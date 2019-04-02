@@ -3,14 +3,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 0 0 40%;
+    padding: 0 2rem;
+  }
 
   &__app {
+    display: flex;
+    flex: 0 0 40%;
     background: #263d42;
-    width: 50%;
-    height: 20rem;
+    height: 50rem;
     box-shadow: 1rem 2rem 3.5rem rgba($color-black, 0.45);
     transition: all 0.3s;
-    margin-right: 5rem;
+    margin: 0 2rem;
 
     &:hover {
       transform: translateY(-0.7rem);
