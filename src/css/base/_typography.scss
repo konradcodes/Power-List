@@ -26,11 +26,25 @@ body {
 .heading-tertiary {
   font-size: 3rem;
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   letter-spacing: 0.3rem;
+}
+.heading-presentation {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: $color-white;
+  margin-left: 2rem;
+}
+.paragraph-date {
+  font-size: 1rem;
+  color: #c0c0c0;
 }
 .paragraph-presentation {
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
   line-height: 3rem;
+}
+.paragraph-copyright {
+  font-size: 1.2rem;
+  font-weight: 500;
 }

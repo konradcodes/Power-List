@@ -1,0 +1,13 @@
+.application {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__main {
+    flex: 0 0 70rem;
+    height: 50rem;
+    background: $color-application;
+    border-radius: 8px;
+  }
+}
