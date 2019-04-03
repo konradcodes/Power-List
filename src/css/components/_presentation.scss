@@ -29,12 +29,12 @@
     }
   }
   &__logo-box {
-    margin: 2rem 2rem;
+    margin: 2rem;
   }
   &__logo {
     height: 4rem;
     width: 4rem;
-    fill: #ead637;
+    fill: $color-logo;
   }
   &__list {
     list-style: none;

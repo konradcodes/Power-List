@@ -21,7 +21,13 @@ body {
   background-clip: text;
   color: transparent;
   display: inline-block;
-  animation: slideFromBottom 1s ease-out;
+
+  &--presentation {
+    animation: slideFromBottom 1s ease-out;
+  }
+  &--app {
+    background-image: linear-gradient(to left top, $color-orange, $color-yellow);
+  }
 }
 .heading-tertiary {
   font-size: 3rem;
@@ -29,7 +35,8 @@ body {
   margin-bottom: 3rem;
   letter-spacing: 0.3rem;
 }
-.heading-presentation {
+.heading-presentation,
+.heading-application {
   font-size: 1.5rem;
   font-weight: 300;
   color: $color-white;
