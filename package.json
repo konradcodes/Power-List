@@ -26,7 +26,8 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.0",
     "axios": "^0.18.0",
-    "pretty-checkbox": "^3.0.3"
+    "pretty-checkbox": "^3.0.3",
+    "uniqid": "^5.0.3"
   },
   "babel": {
     "presets": [
