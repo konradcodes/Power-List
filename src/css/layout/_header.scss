@@ -34,4 +34,71 @@
     display: flex;
     justify-content: flex-start;
   }
+  &__presentation {
+    position: absolute;
+    bottom: -4rem;
+    width: 23rem;
+    height: 48rem;
+    z-index: -1;
+    border-radius: 7%;
+    margin: 1rem 0 0 -1.3rem;
+    background: $color-application;
+    animation: 1s slideFromTop ease-out;
+
+    &-logo-container {
+      margin: 2rem;
+    }
+    &-logo {
+      height: 2.5rem;
+      width: 2.5rem;
+      fill: $color-logo;
+    }
+  }
+  .header {
+    &__list {
+      list-style: none;
+      width: 100%;
+    }
+    &__item {
+      color: $color-white;
+      width: 100%;
+      margin: 0.5rem 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 1rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #707070;
+      }
+    }
+    &__checkbox {
+      margin: 0.5rem 1rem;
+      height: 1.5rem;
+      width: 1.5rem;
+      fill: $color-orange;
+
+      &--delete {
+        height: 1.3rem;
+        width: 1.3rem;
+        fill: $color-orange;
+      }
+
+      &--add {
+        fill: $color-orange;
+      }
+    }
+    &__todo {
+      font-size: 1.2rem;
+      margin-right: auto;
+
+      &--checked {
+        text-decoration: line-through;
+      }
+      &--add {
+        font-size: 1.2rem;
+        color: #a39a92;
+      }
+    }
+  }
 }

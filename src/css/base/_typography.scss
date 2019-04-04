@@ -36,11 +36,19 @@ body {
   letter-spacing: 0.3rem;
 }
 .heading-presentation,
-.heading-application {
+.heading-application,
+.heading-presentation--header {
   font-size: 1.5rem;
   font-weight: 300;
   color: $color-white;
   margin-left: 2rem;
+
+  &--header {
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    margin-left: -0.1rem;
+  }
 }
 .paragraph-date {
   font-size: 1rem;
