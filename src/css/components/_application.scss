@@ -9,6 +9,7 @@
     height: 60rem;
     background: $color-application;
     border-radius: 8px;
+    box-shadow: 1rem 2rem 4rem rgba($color-black, 0.35);
   }
   &__logo-box {
     margin: 2rem;
@@ -30,18 +31,33 @@
     justify-content: flex-start;
     align-items: center;
     padding: 2rem;
-    border-bottom: 1px solid #707070;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #707070;
+    }
+  }
+  &__item--add:hover > &__checkbox--add {
+    transform: rotate(90deg);
+  }
+  &__item--add:hover > &__todo--add {
+    color: $color-orange;
   }
   &__checkbox {
     margin-right: 1rem;
     height: 2rem;
     width: 2rem;
     fill: $color-orange;
+    transition: all 0.3s;
 
     &--delete {
       height: 1.8rem;
       width: 1.8rem;
-      fill: $color-orange;
+      fill: #eee;
+      transition: all 0.3s;
+
+      &:hover {
+        fill: $color-orange;
+      }
     }
 
     &--add {
@@ -51,7 +67,8 @@
   &__todo {
     font-size: 1.5rem;
     margin-right: auto;
-    // text-decoration: none;
+    text-decoration: none;
+    transition: all 0.3s;
 
     &--add {
       font-size: 1.2rem;
@@ -84,8 +101,5 @@
 
   &__input:checked + &__empty {
     background: $color-orange;
-  }
-  &__input:checked ~ &__todo {
-    text-decoration: line-through;
   }
 }
