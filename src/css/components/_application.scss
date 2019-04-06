@@ -32,6 +32,10 @@
     align-items: center;
     padding: 2rem;
 
+    &__user {
+      //! flex-direction: column;
+    }
+
     &:not(:last-child) {
       border-bottom: 1px solid #707070;
     }
@@ -101,5 +105,15 @@
 
   &__input:checked + &__empty {
     background: $color-orange;
+  }
+  &__task {
+    padding: 1rem 2rem;
+    background: $color-orange;
+    outline: none;
+    border: 1px solid #eee;
+    display: block;
+  }
+  &__buttons {
+    display: flex;
   }
 }

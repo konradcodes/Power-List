@@ -1,3 +1,18 @@
 // -----------------------------------------------------------------------------
 //* This file contains all styles related to the button components.
 // -----------------------------------------------------------------------------
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 10rem;
+    outline: none;
+    //Change for the <button element
+    border: none;
+    cursor: pointer;
+  }
+}

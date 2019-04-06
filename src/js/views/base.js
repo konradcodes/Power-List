@@ -1,5 +1,7 @@
 //DOM Elements
 
 export const elements = {
-  row: document.querySelector(".application__item--add")
+  list: document.querySelector(".application__list"),
+  row: document.querySelector(".application__item"),
+  rowAdd: document.querySelector(".application__item--add")
 };
