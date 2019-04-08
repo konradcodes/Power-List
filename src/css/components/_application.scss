@@ -32,10 +32,6 @@
     align-items: center;
     padding: 2rem;
 
-    &__user {
-      //! flex-direction: column;
-    }
-
     &:not(:last-child) {
       border-bottom: 1px solid #707070;
     }
@@ -106,14 +102,32 @@
   &__input:checked + &__empty {
     background: $color-orange;
   }
+  &__add-task {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   &__task {
-    padding: 1rem 2rem;
+    padding: 1.5rem;
+    width: 25rem;
+    opacity: 0.8;
     background: $color-orange;
+    border-radius: 4px;
     outline: none;
-    border: 1px solid #eee;
-    display: block;
+    border: 1px solid #364156;
+    margin-bottom: 1rem;
+    color: $color-white;
+
+    &::placeholder {
+      color: $color-white;
+      opacity: 0.7;
+    }
   }
   &__buttons {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
   }
 }

@@ -5,8 +5,8 @@ export default class Tasks {
     this.tasks = [];
   }
 
-  addTask(id, content) {
-    const task = { id, content };
+  addTask(content) {
+    const task = { id: uniqid(), content };
     this.tasks.push(task);
     //Persist data in localStorage
     this.persistData();
