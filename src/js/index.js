@@ -10,9 +10,9 @@ import * as tasksView from "./views/tasksView";
 // CSS
 import "../css/main.scss";
 
-/** //? Global State of the App
- * - Tasks Object
- */
+// /** //? Global State of the App
+//  * - Tasks Object
+//  */
 
 const state = {};
 //Leaking all the information from state for testing purposes
@@ -20,7 +20,7 @@ window.state = state;
 
 // --- CONTROLLERS ---
 
-//? Task Controller
+// //? Task Controller
 
 const controlTask = () => {
   // 1) New Task Object and add to state
@@ -45,12 +45,12 @@ elements.list.addEventListener("click", e => {
   if (addTask) {
     tasksView.renderForm();
   }
-
-  // if (form) {
-  //   console.log(form);
-  //   form.addEventListener("submit", e => {
-  //     e.preventDefault();
-  //     console.log("dziala");
-  //   });
-  // }
+  if (addTaskBtn) {
+    const input = document.querySelector(".application__task").value;
+    tasksView.clearForm();
+  }
+  if (cancelBtn) {
+    console.log("Cancel clicked");
+    tasksView.clearForm();
+  }
 });

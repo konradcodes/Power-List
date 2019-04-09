@@ -1,6 +1,6 @@
 import { elements } from "./base";
 
-export const clearInput = () => {
+export const clearForm = () => {
   elements.rowAdd.style.display = "block";
   const form = document.querySelector(".application__add-task");
   form.parentElement.removeChild(form);
