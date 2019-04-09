@@ -6,6 +6,9 @@ export const clearForm = () => {
   form.parentElement.removeChild(form);
 };
 // When row is clicked - show input to add your task, hide bin and + icons. Add button and cancel button
+
+const focus = () => document.querySelector(".application__task").focus();
+
 export const renderForm = () => {
   const markup = `
   <div class="application__add-task">
@@ -20,6 +23,23 @@ export const renderForm = () => {
 `;
   elements.list.insertAdjacentHTML("beforeend", markup);
   elements.rowAdd.style.display = "none";
+  focus();
+};
+
+export const renderTasks = (task, id) => {
+  const markup = `
+  <li class="application__item">
+    <label class="application__label">
+      <input type="checkbox" class="application__input" />
+      <div class="application__empty"></div>
+    </label>
+  <p class="application__todo">${task}</p>
+  <svg class="application__checkbox application__checkbox--delete">
+     <use xlink:href="./img/sprite.svg#icon-bin"></use>
+  </svg>
+</li>
+  `;
+  elements.rowAdd.insertAdjacentHTML("beforebegin", markup);
 };
 
 // When bin is clicked delete the row. Ask a confirm message

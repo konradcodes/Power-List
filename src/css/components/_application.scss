@@ -6,7 +6,7 @@
 
   &__main {
     flex: 0 0 90rem;
-    height: 60rem;
+    min-height: 60rem;
     background: $color-application;
     border-radius: 8px;
     box-shadow: 1rem 2rem 4rem rgba($color-black, 0.35);

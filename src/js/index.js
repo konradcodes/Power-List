@@ -47,10 +47,12 @@ elements.list.addEventListener("click", e => {
   }
   if (addTaskBtn) {
     const input = document.querySelector(".application__task").value;
+    state.tasks.addTask(input);
+    const id = state.tasks.tasks.findIndex(el => el.content === input);
+    tasksView.renderTasks(state.tasks.tasks[id].content, state.tasks.tasks[id].id);
     tasksView.clearForm();
   }
   if (cancelBtn) {
-    console.log("Cancel clicked");
     tasksView.clearForm();
   }
 });
