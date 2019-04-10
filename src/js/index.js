@@ -37,22 +37,75 @@ window.addEventListener("load", () => {
 elements.list.addEventListener("click", e => {
   e.preventDefault();
   const addTask = e.target.closest(".application__item--add");
-  const form = e.target.closest(".application__form");
   const addTaskBtn = e.target.closest(".btn--add");
+  const updateBtn = e.target.closest(".btn--update");
   const cancelBtn = e.target.closest(".btn--cancel");
+  const deleteBtn = e.target.closest(".application__checkbox--delete");
+  const userTask = e.target.closest(".application__todo--user");
 
-  //If Row is clicked
+  //When Row is clicked - Render the Form on UI
   if (addTask) {
     tasksView.renderForm();
   }
+  //When Add Task Button is clicked
   if (addTaskBtn) {
+    //Receive Input from the user
     const input = document.querySelector(".application__task").value;
-    state.tasks.addTask(input);
-    const id = state.tasks.tasks.findIndex(el => el.content === input);
-    tasksView.renderTasks(state.tasks.tasks[id].content, state.tasks.tasks[id].id);
+    if (input !== "") {
+      //If it's not empty add the task to state.
+      state.tasks.addTask(input);
+      //Get the Index of the task based on the content compared to the one in state.
+      const index = state.tasks.tasks.findIndex(el => el.content === input);
+      //Render the task on UI
+      tasksView.renderTasks(state.tasks.tasks[index].content, state.tasks.tasks[index].id);
+      //Clear form
+      tasksView.clearForm();
+    } else {
+      //When Input is empty - Clear the form
+      tasksView.clearForm();
+    }
+  }
+  //When Cancel is clicked Clear the form
+  if (cancelBtn) {
+    const li = e.target.closest("[data-ID]");
+    const index = state.tasks.tasks.findIndex(el => el.id === li.dataset.id);
+    if (li) {
+      tasksView.renderUpdatedTask(li.dataset.id, state.tasks.tasks[index].content);
+    } else {
+      tasksView.clearForm();
+    }
+  }
+  //When Bin Icon is Clicked - Delete from State and from UI
+  if (deleteBtn) {
+    const taskID = deleteBtn.parentElement.dataset.id;
+    //Delete Task from the State
+    state.tasks.deleteTask(taskID);
+    //Delete Task From the UI
+    tasksView.deleteTask(taskID);
+    //Clear Form
     tasksView.clearForm();
   }
-  if (cancelBtn) {
-    tasksView.clearForm();
+  if (userTask) {
+    //When User Todo Is Clicked open a new form to enable editting of the task
+    const taskID = userTask.parentElement.dataset.id;
+    const index = state.tasks.tasks.findIndex(el => el.id === taskID);
+    //Render the task on UI
+    tasksView.renderUpdateForm(taskID, state.tasks.tasks[index].content);
+  }
+  if (updateBtn) {
+    //Receive Input from the user
+    const input = document.querySelector(".application__task").value;
+    //If it's not empty add the task to state.
+    if (input !== "") {
+      const taskID = e.target.closest(".application__add-task--update").parentElement.dataset.id;
+      state.tasks.updateTask(taskID, input);
+      //Get the Index of the task based on the content compared to the one in state.
+      const index = state.tasks.tasks.findIndex(el => el.content === input);
+      //Render the task on UI
+      tasksView.renderUpdatedTask(state.tasks.tasks[index].id, state.tasks.tasks[index].content);
+    } else {
+      //When Input is empty - Clear the form
+      tasksView.clearForm();
+    }
   }
 });
