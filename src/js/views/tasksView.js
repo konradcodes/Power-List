@@ -71,7 +71,6 @@ export const renderUpdatedTask = (id, updatedTask) => {
     </svg>
   `;
   const el = document.querySelector(`[data-ID="${id}"]`);
-  // console.log(el);
   if (el) {
     el.innerHTML = markup;
   }

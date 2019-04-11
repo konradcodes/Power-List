@@ -55,7 +55,7 @@ elements.list.addEventListener("click", e => {
       //If it's not empty add the task to state.
       state.tasks.addTask(input);
       //Get the Index of the task based on the content compared to the one in state.
-      const index = state.tasks.tasks.findIndex(el => el.content === input);
+      const index = state.tasks.tasks.findIndex(el => el.id);
       //Render the task on UI
       tasksView.renderTasks(state.tasks.tasks[index].content, state.tasks.tasks[index].id);
       //Clear form
