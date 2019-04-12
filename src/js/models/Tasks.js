@@ -1,12 +1,10 @@
-import uniqid from "uniqid";
-
 export default class Tasks {
   constructor() {
     this.tasks = [];
   }
 
-  addTask(content) {
-    const task = { id: uniqid(), content };
+  addTask(id, content) {
+    const task = { id, content };
     this.tasks.push(task);
     //Persist data in localStorage
     this.persistData();

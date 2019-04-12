@@ -3,6 +3,9 @@
 //Models
 import Tasks from "./models/Tasks";
 
+//Uniq ID
+import uniqid from "uniqid";
+
 //Views
 import { elements } from "./views/base";
 import * as tasksView from "./views/tasksView";
@@ -53,9 +56,10 @@ elements.list.addEventListener("click", e => {
     const input = document.querySelector(".application__task").value;
     if (input !== "") {
       //If it's not empty add the task to state.
-      state.tasks.addTask(input);
+      const id = uniqid();
+      state.tasks.addTask(id, input);
       //Get the Index of the task based on the content compared to the one in state.
-      const index = state.tasks.tasks.findIndex(el => el.id);
+      const index = state.tasks.tasks.findIndex(el => el.id === id);
       //Render the task on UI
       tasksView.renderTasks(state.tasks.tasks[index].content, state.tasks.tasks[index].id);
       //Clear form
@@ -68,8 +72,8 @@ elements.list.addEventListener("click", e => {
   //When Cancel is clicked Clear the form
   if (cancelBtn) {
     const li = e.target.closest("[data-ID]");
-    const index = state.tasks.tasks.findIndex(el => el.id === li.dataset.id);
     if (li) {
+      const index = state.tasks.tasks.findIndex(el => el.id === li.dataset.id);
       tasksView.renderUpdatedTask(li.dataset.id, state.tasks.tasks[index].content);
     } else {
       tasksView.clearForm();
@@ -78,12 +82,11 @@ elements.list.addEventListener("click", e => {
   //When Bin Icon is Clicked - Delete from State and from UI
   if (deleteBtn) {
     const taskID = deleteBtn.parentElement.dataset.id;
+    console.log(deleteBtn.parentElement.dataset.id);
     //Delete Task from the State
     state.tasks.deleteTask(taskID);
     //Delete Task From the UI
     tasksView.deleteTask(taskID);
-    //Clear Form
-    tasksView.clearForm();
   }
   if (userTask) {
     //When User Todo Is Clicked open a new form to enable editting of the task
