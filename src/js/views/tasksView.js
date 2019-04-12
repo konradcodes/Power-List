@@ -41,13 +41,14 @@ export const renderUpdateForm = (id, content) => {
   if (el) {
     el.innerHTML = markup;
   }
+  focus();
 };
 
 export const renderTasks = (task, id) => {
   const markup = `
   <li class="application__item" data-ID="${id}">
     <label class="application__label">
-      <input type="checkbox" class="application__input" />
+      <input type="checkbox" class="application__input">
       <div class="application__empty"></div>
     </label>
     <p class="application__todo application__todo--user">${task}</p>

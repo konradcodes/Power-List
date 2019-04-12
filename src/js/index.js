@@ -38,7 +38,7 @@ window.addEventListener("load", () => {
 
 // --- EVENT LISTENERS ---
 elements.list.addEventListener("click", e => {
-  e.preventDefault();
+  // e.preventDefault();
   const addTask = e.target.closest(".application__item--add");
   const addTaskBtn = e.target.closest(".btn--add");
   const updateBtn = e.target.closest(".btn--update");
@@ -82,7 +82,6 @@ elements.list.addEventListener("click", e => {
   //When Bin Icon is Clicked - Delete from State and from UI
   if (deleteBtn) {
     const taskID = deleteBtn.parentElement.dataset.id;
-    console.log(deleteBtn.parentElement.dataset.id);
     //Delete Task from the State
     state.tasks.deleteTask(taskID);
     //Delete Task From the UI
