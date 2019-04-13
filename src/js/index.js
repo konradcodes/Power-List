@@ -18,6 +18,7 @@ import '../css/main.scss';
 //  */
 
 const state = {};
+window.state = state;
 
 // --- CONTROLLERS ---
 
@@ -38,6 +39,11 @@ window.addEventListener('load', () => {
 
   //Render the existing tasks
   state.tasks.tasks.forEach(task => tasksView.renderTasks(task.content, task.id));
+
+  //Render the Current Date
+  elements.paragraphDate.textContent = `${state.tasks.currentDate.dayOfTheWeek} ${state.tasks.currentDate.month} ${
+    state.tasks.currentDate.day
+  }`;
 });
 
 // --- EVENT LISTENERS ---

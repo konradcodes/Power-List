@@ -1,6 +1,7 @@
 export default class Tasks {
   constructor() {
     this.tasks = [];
+    this.currentDate = { dayOfTheWeek: new Date().getDay(), month: new Date().getMonth() + 1, day: new Date().getDate() };
   }
 
   addTask(id, content) {
@@ -35,3 +36,10 @@ export default class Tasks {
     if (storage) this.tasks = storage;
   }
 }
+
+export const currentDate = () => {
+  const currentDate = new Date();
+  const month = currentDate.getMonth() + 1;
+  const day = currentDate.getDay();
+  elements.paragraphDate.textContent = currentDate;
+};
