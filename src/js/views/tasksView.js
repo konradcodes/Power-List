@@ -29,7 +29,7 @@ export const renderUpdateForm = (id, content) => {
   const markup = `
   <div class="application__add-task application__add-task--update" data-edit="true">
   <form class="application__form">
-     <input type="text" class="application__task" autofocus required value="${content}">
+     <input type="text" class="application__task" onfocus="this.setSelectionRange(1000,1001);" autofocus required value="${content}">
      <div class="application__buttons">
         <button class="btn btn--update" type="submit">Save</button>
         <button class="btn btn--cancel">Cancel</button>

@@ -45,6 +45,7 @@ elements.list.addEventListener("click", e => {
   const cancelBtn = e.target.closest(".btn--cancel");
   const deleteBtn = e.target.closest(".application__checkbox--delete");
   const userTask = e.target.closest(".application__todo--user");
+  const checkBtn = e.target.closest(".application__input");
 
   //When Row is clicked - Render the Form on UI
   if (addTask) {
@@ -109,5 +110,10 @@ elements.list.addEventListener("click", e => {
       //When Input is empty - Clear the form
       tasksView.clearForm();
     }
+  }
+  if (checkBtn) {
+    const taskID = checkBtn.parentElement.parentElement.dataset.id;
+    state.tasks.deleteTask(taskID);
+    tasksView.deleteTask(taskID);
   }
 });
