@@ -26,11 +26,11 @@ export default class Tasks {
 
   persistData() {
     //Set local storage
-    localStorage.setItem("tasks", JSON.stringify(this.tasks));
+    localStorage.setItem('tasks', JSON.stringify(this.tasks));
   }
 
   readStorage() {
-    const storage = JSON.parse(localStorage.getItem("tasks"));
+    const storage = JSON.parse(localStorage.getItem('tasks'));
     //Restoring tasks from the localStorage
     if (storage) this.tasks = storage;
   }

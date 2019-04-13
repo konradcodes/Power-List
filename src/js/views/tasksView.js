@@ -1,12 +1,12 @@
-import { elements } from "./base";
+import { elements } from './base';
 
 export const clearForm = () => {
-  elements.rowAdd.style.display = "block";
-  const form = document.querySelector(".application__add-task");
+  elements.rowAdd.style.display = 'block';
+  const form = document.querySelector('.application__add-task');
   form.parentElement.removeChild(form);
 };
 
-const focus = () => document.querySelector(".application__task").focus();
+const focus = () => document.querySelector('.application__task').focus();
 
 export const renderForm = () => {
   const markup = `
@@ -20,8 +20,8 @@ export const renderForm = () => {
   </form>
 </div>
 `;
-  elements.list.insertAdjacentHTML("beforeend", markup);
-  elements.rowAdd.style.display = "none";
+  elements.list.insertAdjacentHTML('beforeend', markup);
+  elements.rowAdd.style.display = 'none';
   focus();
 };
 
@@ -57,7 +57,7 @@ export const renderTasks = (task, id) => {
     </svg>  
   </li>
   `;
-  elements.rowAdd.insertAdjacentHTML("beforebegin", markup);
+  elements.rowAdd.insertAdjacentHTML('beforebegin', markup);
 };
 
 export const renderUpdatedTask = (id, updatedTask) => {
@@ -83,4 +83,7 @@ export const deleteTask = id => {
   const el = document.querySelector(`[data-ID="${id}"]`);
   if (el) el.parentElement.removeChild(el);
 };
-//When completed dot is clicked line-through the text animation + darken the row.
+export const taskDisappearAnimation = userTodo => {
+  userTodo.style.textDecoration = 'line-through';
+  userTodo.style.animation = 'fadeAway 1s ease-out';
+};

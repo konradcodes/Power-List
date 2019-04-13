@@ -34,3 +34,12 @@
     transform: translateY(0);
   }
 }
+
+@keyframes fadeAway {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
