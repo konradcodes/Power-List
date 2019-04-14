@@ -3,7 +3,7 @@
  */
 body {
   font-size: 1rem; // 1rem = 10px;
-  font-family: Montserrat, "sans-serif";
+  font-family: Montserrat, 'sans-serif';
 }
 
 .heading-primary {
@@ -12,6 +12,20 @@ body {
   opacity: 0.8;
   display: inline-block;
   animation: slideFromRight 1s ease-out;
+
+  @media only screen and (max-width: $bp-lg-tablet) {
+    font-size: 4.5rem;
+  }
+  @media only screen and (max-width: $bp-small-tablet) {
+    font-size: 4rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 3.5rem;
+    opacity: 0.9;
+  }
+  @media only screen and (max-width: $bp-smaller) {
+    font-size: 3rem;
+  }
 }
 .heading-secondary {
   font-size: 4.5rem;
@@ -21,6 +35,16 @@ body {
   background-clip: text;
   color: transparent;
   display: inline-block;
+
+  @media only screen and (max-width: $bp-lg-tablet) {
+    font-size: 4rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 3.5rem;
+  }
+  @media only screen and (max-width: $bp-smaller) {
+    font-size: 3rem;
+  }
 
   &--presentation {
     animation: slideFromBottom 1s ease-out;
@@ -48,6 +72,11 @@ body {
     margin-top: 1rem;
     text-align: center;
     margin-left: -0.1rem;
+
+    @media only screen and (max-width: $bp-small-tablet) {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
   }
 }
 .heading-application {

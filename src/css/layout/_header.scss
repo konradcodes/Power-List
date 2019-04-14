@@ -10,6 +10,13 @@
   border-bottom-right-radius: 90% 50%;
   border-bottom-left-radius: 40% 90%;
 
+  @media only screen and (max-width: $bp-small-tablet) {
+    height: 60vh;
+  }
+  @media only screen and (max-width: $bp-smaller) {
+    height: 50vh;
+  }
+
   &__container {
     display: flex;
     align-items: center;
@@ -22,6 +29,13 @@
     justify-content: flex-end;
     flex: 1;
     margin-right: 10rem;
+
+    @media only screen and (max-width: $bp-large) {
+      margin-right: 5rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      margin-right: 3rem;
+    }
   }
   &__image {
     position: absolute;
@@ -29,11 +43,29 @@
     bottom: -5rem;
     animation: slideFromTop 1s ease-out;
     backface-visibility: hidden;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 45rem;
+    }
+    @media only screen and (max-width: $bp-small-tablet) {
+      height: 40rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      height: 35rem;
+    }
   }
   &__text-box {
     flex: 1;
     display: flex;
     justify-content: flex-start;
+
+    @media only screen and (max-width: $bp-large) {
+      flex: 1.5;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      flex: 1.4;
+      padding-right: 1rem;
+    }
   }
   &__presentation {
     position: absolute;
@@ -46,13 +78,39 @@
     background: $color-application;
     animation: 1s slideFromTop ease-out;
 
+    @media only screen and (max-width: $bp-medium) {
+      height: 43rem;
+      width: 21rem;
+      margin: 1rem 0 0 -1rem;
+    }
+    @media only screen and (max-width: $bp-small-tablet) {
+      height: 38rem;
+      width: 18rem;
+      margin: 1rem 0 0 -0.9rem;
+    }
+    @media only screen and (max-width: $bp-smaller) {
+      height: 34rem;
+      width: 16rem;
+      margin: 0 0 0 -0.7rem;
+      bottom: -4.5rem;
+    }
+
     &-logo-container {
       margin: 2rem;
+
+      @media only screen and (max-width: $bp-small-tablet) {
+        margin: 1rem;
+      }
     }
     &-logo {
       height: 2.5rem;
       width: 2.5rem;
       fill: $color-logo;
+
+      @media only screen and (max-width: $bp-small-tablet) {
+        height: 1.5rem;
+        width: 1.5rem;
+      }
     }
   }
   .header {
@@ -72,6 +130,11 @@
       &:not(:last-child) {
         border-bottom: 1px solid #707070;
       }
+
+      @media only screen and (max-width: $bp-small-tablet) {
+        margin: 0.3rem 0;
+        padding: 0.6rem;
+      }
     }
     &__checkbox {
       margin: 0.5rem 1rem;
@@ -83,6 +146,11 @@
         height: 1.3rem;
         width: 1.3rem;
         fill: $color-orange;
+
+        @media only screen and (max-width: $bp-small-tablet) {
+          height: 1rem;
+          width: 1rem;
+        }
       }
 
       &--add {

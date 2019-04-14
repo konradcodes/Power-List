@@ -10,6 +10,18 @@
     background: $color-application;
     border-radius: 8px;
     box-shadow: 1rem 2rem 4rem rgba($color-black, 0.35);
+
+    @media only screen and (max-width: $bp-lg-tablet) {
+      flex: 0 0 80rem;
+      min-height: 50rem;
+    }
+    @media only screen and (max-width: $bp-lg-tablet) {
+      flex: 0 0 70rem;
+      min-height: 40rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      flex: 0 1 60rem;
+    }
   }
   &__logo-box {
     margin: 2rem;
@@ -18,6 +30,11 @@
     height: 4rem;
     width: 4rem;
     fill: $color-logo;
+
+    @media only screen and (max-width: $bp-large) {
+      height: 3rem;
+      width: 3rem;
+    }
   }
   &__list {
     list-style: none;

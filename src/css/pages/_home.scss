@@ -3,8 +3,25 @@
 // -----------------------------------------------------------------------------
 
 .section-presentation {
-  padding: 15rem 0;
+  padding: 15rem 0 10rem 0;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 12rem 0 10rem 0;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    padding: 9rem 0;
+  }
+  @media only screen and (max-width: $bp-small) {
+    padding: 9rem 0 6rem 0;
+  }
+  @media only screen and (max-width: $bp-smaller) {
+    padding: 20rem 0 6rem 0;
+  }
 }
 .section-application {
-  padding: 5rem 0;
+  padding: 5rem 0 10rem 0;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 3rem 0 10rem 0;
+  }
 }

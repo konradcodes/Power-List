@@ -15,3 +15,16 @@ $color-application: #263d42;
 $color-logo: #ead637;
 
 //* Breakpoints
+// -> Large to small
+
+$bp-large: 87.5em; //1400/16px = 87.5em;
+$bp-medium: 75em; // 1200/16px = 75em;
+$bp-lg-tablet: 68.75em; // 1100/16px = 68.75em;
+$bp-tablet: 62.5em; // 1000/16px = 62.5em;
+$bp-small-tablet: 56.25em; //900/16px = 56.25em;
+$bp-small: 50em; //800/16px = 50em;
+$bp-smaller: 43.75em; //700/16px = 43.75em;
+
+// @media only screen and (max-width: $bp-medium) {
+//    font-size: 2rem;
+//  }

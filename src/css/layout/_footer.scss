@@ -4,4 +4,8 @@
 .footer {
   padding: 15rem 0 2rem 0;
   text-align: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 10rem 0 2rem 0;
+  }
 }
