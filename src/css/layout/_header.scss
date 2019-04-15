@@ -13,13 +13,18 @@
   @media only screen and (max-width: $bp-lg-tablet) {
     height: 55vh;
   }
+  @media only screen and (device-width: 812px) and (device-height: 375px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    height: 95vh;
+  }
   @media only screen and (max-width: $bp-smaller) {
     height: 50vh;
+  }
+  @media only screen and (device-width: 667px) and (device-height: 375px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    height: 95vh;
   }
   @media only screen and (max-width: $bp-xs) {
     height: 60vh;
   }
-
   &__container {
     display: flex;
     align-items: center;
