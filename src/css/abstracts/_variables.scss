@@ -24,6 +24,9 @@ $bp-tablet: 62.5em; // 1000/16px = 62.5em;
 $bp-small-tablet: 56.25em; //900/16px = 56.25em;
 $bp-small: 50em; //800/16px = 50em;
 $bp-smaller: 43.75em; //700/16px = 43.75em;
+$bp-smallest: 37.5em; //600/16px = 37.5em;
+$bp-xs: 31.25em; //500/16px = 31.25em
+$bp-small-phone: 25em; //400/16px = 25em;
 
 // @media only screen and (max-width: $bp-medium) {
 //    font-size: 2rem;

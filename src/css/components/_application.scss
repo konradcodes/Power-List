@@ -4,6 +4,10 @@
   justify-content: center;
   align-items: center;
 
+  @media only screen and (max-width: $bp-smaller) {
+    margin-top: 7rem;
+  }
+
   &__main {
     flex: 0 0 90rem;
     min-height: 60rem;
@@ -22,9 +26,25 @@
     @media only screen and (max-width: $bp-small) {
       flex: 0 1 60rem;
     }
+    @media only screen and (max-width: $bp-smaller) {
+      flex: 0 1 50rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      flex: 0 1 44rem;
+    }
+    @media only screen and (max-width: $bp-xs) {
+      flex: 0 1 35rem;
+    }
+    @media only screen and (max-width: $bp-small-phone) {
+      flex: 0 1 30rem;
+    }
   }
   &__logo-box {
     margin: 2rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      margin: 1rem;
+    }
   }
   &__logo {
     height: 4rem;
@@ -34,6 +54,10 @@
     @media only screen and (max-width: $bp-large) {
       height: 3rem;
       width: 3rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      height: 2rem;
+      width: 2rem;
     }
   }
   &__list {
@@ -48,6 +72,10 @@
     justify-content: flex-start;
     align-items: center;
     padding: 2rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 1.5rem;
+    }
 
     &:not(:last-child) {
       border-bottom: 1px solid #707070;
@@ -72,6 +100,11 @@
       fill: #eee;
       transition: all 0.3s;
 
+      @media only screen and (max-width: $bp-smallest) {
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+
       &:hover {
         fill: $color-orange;
       }
@@ -87,9 +120,17 @@
     text-decoration: none;
     transition: all 0.3s;
 
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 1.4rem;
+    }
+
     &--add {
       font-size: 1.3rem;
       color: #a39a92;
+
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 1.2rem;
+      }
     }
   }
   &__input {
@@ -103,6 +144,11 @@
     position: relative;
     border-radius: 50%;
     margin-right: 1rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
   }
 
   &__empty {

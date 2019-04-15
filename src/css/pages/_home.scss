@@ -11,11 +11,17 @@
   @media only screen and (max-width: $bp-medium) {
     padding: 9rem 0;
   }
+  @media only screen and (max-width: $bp-lg-tablet) {
+    padding: 12rem 0 9rem 0;
+  }
   @media only screen and (max-width: $bp-small) {
     padding: 9rem 0 6rem 0;
   }
   @media only screen and (max-width: $bp-smaller) {
     padding: 20rem 0 6rem 0;
+  }
+  @media only screen and (max-width: $bp-xs) {
+    padding: 12rem 0 6rem 0;
   }
 }
 .section-application {

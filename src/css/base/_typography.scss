@@ -26,6 +26,9 @@ body {
   @media only screen and (max-width: $bp-smaller) {
     font-size: 3rem;
   }
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 2.5rem;
+  }
 }
 .heading-secondary {
   font-size: 4.5rem;
@@ -45,6 +48,9 @@ body {
   @media only screen and (max-width: $bp-smaller) {
     font-size: 3rem;
   }
+  @media only screen and (max-width: $bp-small-phone) {
+    font-size: 2.6rem;
+  }
 
   &--presentation {
     animation: slideFromBottom 1s ease-out;
@@ -58,6 +64,13 @@ body {
   font-weight: 500;
   margin-bottom: 3rem;
   letter-spacing: 0.3rem;
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 2.5rem;
+  }
+  @media only screen and (max-width: $bp-small-phone) {
+    font-size: 2rem;
+  }
 }
 .heading-presentation,
 .heading-application,
@@ -66,6 +79,10 @@ body {
   font-weight: 300;
   color: $color-white;
   margin-left: 2rem;
+
+  @media only screen and (max-width: $bp-smaller) {
+    font-size: 1.2rem;
+  }
 
   &--header {
     font-size: 1rem;
@@ -85,11 +102,22 @@ body {
 .paragraph-date {
   font-size: 1rem;
   color: #c0c0c0;
+
+  @media only screen and (max-width: $bp-smaller) {
+    font-size: 0.9rem;
+  }
 }
 .paragraph-presentation {
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
   line-height: 3rem;
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 1.3rem;
+  }
+  @media only screen and (max-width: $bp-small-phone) {
+    font-size: 1.2rem;
+  }
 }
 .paragraph-copyright {
   font-size: 1.2rem;
