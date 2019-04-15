@@ -41,9 +41,15 @@ window.addEventListener('load', () => {
   state.tasks.tasks.forEach(task => tasksView.renderTasks(task.content, task.id));
 
   //Render the Current Date
-  elements.paragraphDate.textContent = `${state.tasks.currentDate.dayOfTheWeek} ${state.tasks.currentDate.month} ${
-    state.tasks.currentDate.day
-  }`;
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
+  const paragraphs = Array.from(elements.paragraphDate);
+  paragraphs.map(
+    paragraph =>
+      (paragraph.textContent = `${days[state.tasks.currentDate.dayOfTheWeek]} ${months[state.tasks.currentDate.month]} ${
+        state.tasks.currentDate.day
+      }`)
+  );
 });
 
 // --- EVENT LISTENERS ---

@@ -5,5 +5,5 @@ export const elements = {
   row: document.querySelector('.application__item'),
   rowAdd: document.querySelector('.application__item--add'),
   userInput: document.querySelector('.application__task'),
-  paragraphDate: document.querySelector('.paragraph-date--app')
+  paragraphDate: document.querySelectorAll('.paragraph-date')
 };

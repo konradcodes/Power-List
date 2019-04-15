@@ -1,7 +1,7 @@
 export default class Tasks {
   constructor() {
     this.tasks = [];
-    this.currentDate = { dayOfTheWeek: new Date().getDay(), month: new Date().getMonth() + 1, day: new Date().getDate() };
+    this.currentDate = { dayOfTheWeek: new Date().getDay(), month: new Date().getMonth(), day: new Date().getDate() };
   }
 
   addTask(id, content) {
