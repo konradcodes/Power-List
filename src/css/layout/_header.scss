@@ -84,6 +84,7 @@
     }
     @media only screen and (max-width: $bp-xs) {
       bottom: -4.5rem;
+      animation: 1s slideFromLeft ease-out;
     }
   }
   &__text-box {
@@ -143,6 +144,7 @@
     @media only screen and (max-width: $bp-xs) {
       margin: 0;
       bottom: -4rem;
+      animation: 1s slideFromLeft ease-out;
     }
 
     &-logo-container {

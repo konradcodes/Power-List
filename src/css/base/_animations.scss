@@ -24,6 +24,17 @@
   }
 }
 
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translateX(0);
+  }
+}
+
 @keyframes slideFromBottom {
   0% {
     opacity: 0;
